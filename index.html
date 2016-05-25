@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Sample</title>
+			<style>
+				.default{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: gray;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted gray;
+			}
+			.orange{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: orange;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted orange;
+			}
+			.red{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: red;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted red;
+			}
+			.blue{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: blue;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted blue;
+			}
+			.gray{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: gray;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted gray;
+			}
+			.pink{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: pink;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted pink;
+			}
+		</style>
+	</head>
+		<script>
+		//never use this in angular :- window.onload = fun; 
+		// hoisting :-
+		//	window.onload = func() // this bit of code loads first
+		//	window.onload = func   // this is refrence to function and will loaded lately
+			function func(){
+				console.log ("hoisting")
+			}			 
+			 
+			// defer :- Html keyword to load script at the end 
+			// browser parallelism , max concurrent (async) calls made by browser is 6  
+			
+		</script>
+		<script  src="lib/angular.js"> </script> 
+	 <script defer src="lib/first.js"> </script> 
+	</head>
+	
+	<!--<body data-ng-app data-ng-init="message ='Test'">
+		<h1>{{message}}</h1> // angular expressions 
+	</body> -->
+	<!-- <body data-ng-app data-ng-init="heroes =['Batman','Superman','Ironman']">
+		
+		<ul>
+			<li data-ng-repeat="hero in heroes"> {{hero | lowercase}}</li> // function cannot be called in angular expressions, because expression itself is a function 
+			
+		</ul>
+
+	</body> -->
+	
+	<body data-ng-app data-ng-init="colour= 'red'; next='pink'">
+		<input data-ng-model="data" />
+		<h1>{{"colur: " + data}}<h2>
+			<h1 data-ng-bind=" 'colour:   ' + data"></h1>
+			<div data-ng-class="colour" style="background-color: {{data}}"></div>
+				
+	</body>
+	
+</html>
+

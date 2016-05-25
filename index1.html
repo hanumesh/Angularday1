@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script  src="lib/angular.js"> </script> 
+	
+		<title>Resizable div</title>
+			<style>
+			.default{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: gray;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted gray;
+			}
+			.orange{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: orange;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted orange;
+			}
+			.red{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: red;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted red;
+			}
+			.blue{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: blue;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted blue;
+			}
+			.gray{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: gray;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted gray;
+			}
+			.pink{
+				width: 200px;
+				height: 200px;				
+				margin: auto;
+				background-color: pink;
+				color: white;
+				font-family: Arial;
+				text-align: center;
+				border: 1px dotted pink;
+			}
+		</style>
+	</head>
+
+	<body data-ng-app data-ng-init="data=50">		
+		<input type="range" min ="50" max ="200" data-ng-model = "data" />
+			<div class= "orange" style ="width:{{data}}px"></div>				
+	</body>
+</html>
