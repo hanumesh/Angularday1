@@ -1,0 +1,27 @@
+<input type="text" ng-model="fil" />
+<table border="1" cellpadding="5">
+	<tr>
+		<th>Sl No. </th>
+		<th ng-click="sortFun('title')">Title</th>
+		<th ng-click="sortFun('photo')">Photo</th>
+		<th ng-click="sortFun('fname')">First Name</th>
+		<th ng-click="sortFun('lname')">Last Name</th>
+		<th ng-click="sortFun('city')">City</th>
+		<th ng-click="sortFun('power')">Power</th>
+		<th ng-click="sortFun('price')">Price</th>
+		<th ng-click="sortFun('releasedate')">Release Date</th>
+	</tr>
+	<tr ng-repeat="hero in data | filter : { title : fil } | orderBy : sorton : rev">
+		<td>{{ $index+1 }}</td>
+		<td>{{ hero.title }}</td>
+		<td><img style="width: 50px" ng-src="{{ hero.photo }}" /></td>
+		<td>{{ hero.fname|uppercase }}</td>
+		<td>{{ hero.lname|uppercase }}</td>
+		<td>{{ hero.city }}</td>
+		<td>
+		<input type="range" ng-value="{{ hero.power }}" min="0" max="10" />
+		</td>
+		<td>{{ hero.price|currency:'INR ':3 }}</td>
+		<td>{{ hero.releasedate | date : 'dd-MMM-yyyy'}}</td>
+	</tr>
+</table>

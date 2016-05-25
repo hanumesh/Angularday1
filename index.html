@@ -66,7 +66,7 @@
 				border: 1px dotted pink;
 			}
 		</style>
-	</head>
+
 		<script>
 		//never use this in angular :- window.onload = fun; 
 		// hoisting  example :-
@@ -81,8 +81,7 @@
 			
 		</script>
 		<script  src="lib/angular.js"> </script> 
-	 <script defer src="lib/first.js"> </script> 
-	</head>
+	 <script defer src="lib/first.js"> </script>
 	
 	<!--<body data-ng-app data-ng-init="message ='Test'">
 		<h1>{{message}}</h1> // angular expressions 
@@ -95,10 +94,12 @@
 		</ul>
 
 	</body> -->
+
+	</head>
 	
 	<body data-ng-app data-ng-init="colour= 'red'; next='pink'">
 		<input data-ng-model="data" />
-		<h1>{{"colur: " + data}}<h2>
+		<h1>{{"colur: " + data}}<h1>
 			<h1 data-ng-bind=" 'colour:   ' + data"></h1>
 			<div data-ng-class="colour" style="background-color: {{data}}"></div>
 				

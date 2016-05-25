@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<script  src="lib/angular.js"> </script> 
-	
-		<title>Resizable div</title>
+<head>
+	<meta charset="UTF-8">
+	<script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
 
-	</head>
+	<script src="app/module/app.js"></script>
+	<script src="app/controller/mycontroller.js"></script>
+	<script src="app/config/config.js"></script>
 
-	<body data-ng-app data-ng-init="">		
-				
-	</body>
+	<title>Routing controllers & UIRoute</title>
+</head>
+<body ng-app="app">
+<ng-view></ng-view>
+</body>
 </html>
