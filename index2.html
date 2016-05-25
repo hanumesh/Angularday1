@@ -15,20 +15,24 @@
 		{ title : 'Ironman',	fname : 'Tony',  lname : 'Stark', 	city : 'New york', 		power : 7,  price : 450.54678, releasedate : '2016-03-24',  photo: 'images/ironman.jpg'},
 		{ title : 'Phantom',	fname : 'Kit',   lname : 'Walker', 	city : 'Bhangala', 		power : 6,  price : 320.74568, releasedate : '2016-03-19',  photo: 'images/phantom.jpg'}
 		 
-		 ]">
-		 <table border="1">		    	
-	    	<td>Sl No</td>
-	    	<td>Title</td>
-	    	<td>FirstName</td>
-	    	<td>LastName</td>
-	    	<td>city</td>
-	    	<td>power</td>
-	    	<td>releasedate</td>
-	    	<td>price</td>
-	    	<td>photo</td>
-	    	
-	   	<!--  <tr ng-repeat="hero in heros | limitTo : 3 : 2 "></tr>--> 
-	    <tr ng-repeat="hero in data">	 	    	
+		 ]; sorton ='title' ; rev =true";>
+		 
+		 <input  type="text" ng-model ="fil"/>
+		 <table border="1" cellpadding="5">	
+		 	<tr>	    	
+	    	<th >Sl No. </th>
+	    	<th ng-click ="sorton = 'title'; rev= !rev" >Title</th>
+	    	<th>Photo</th>
+	    	<th>FirstName</th>
+	    	<th>LastName</th>	    
+	    	<th>City</th>
+	    	<th>Power</th>	
+	    	<th>Releasedate</th>    
+	    	<th>Price</th>	    	
+	    	</tr>
+	   	<!--  <tr ng-repeat="hero in heros | limitTo : 3 : 2 "></tr>-->
+	   	 
+	    <tr ng-repeat="hero in data | filter : { title :fil } | orderBy : sorton : rev" >	 	    	
 	    	<td># {{ $index + 1 }}</td>
 		<td>
 			<label ng-show="$first"> First : </label>
@@ -41,8 +45,8 @@
 			{{ hero.title }}
 		</td>
 		<td><img width="40" align="absmiddle" src="{{ hero.photo }}"></td>
-		<td>{{ hero.fName }}</td>
-		<td>{{ hero.lName }}</td>
+		<td>{{ hero.fname }}</td>
+		<td>{{ hero.lname }}</td>
 		<td>{{ hero.city }}</td>		
 		<td><input type="range" ng-value="hero.power" min=0 max=10 /></td>
 		<td>{{ hero.releasedate | date : 'MM-dd-yyyy'}}</td>
