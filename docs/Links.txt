@@ -1,3 +1,7 @@
 https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make
 
 https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+
+
+factories should return a object
+ 
